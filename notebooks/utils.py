@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from typing import Optional, Dict, Any
 from crewai import Agent, Task, Crew, Process
-from crewai.tools import tool
+from crewai_tools import tool
 from langchain_community.tools import DuckDuckGoSearchRun
 
 def load_env():
