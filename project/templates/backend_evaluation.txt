@@ -1,0 +1,10 @@
+Evaluate backend technologies, libraries, and frameworks from the provided Technology Radar document.
+Focus on .NET and Python ecosystems mentioned in the document. For each technology:
+
+1. Evaluate current adoption levels in the industry
+2. Specify whether it's open-source or licensed
+3. Provide insights on why certain technologies are in their respective quadrants (Adopt, Trial, Assess, Hold)
+4. Highlight any technologies that should be moved to different quadrants based on current industry trends
+
+Technology Radar Content:
+{tech_radar_content} 
