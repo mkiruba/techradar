@@ -1,9 +1,9 @@
-crewai==0.28.8
-crewai_tools==0.1.6
-langchain_community==0.0.29
-langchain==0.1.13
-langchain-openai==0.1.7
-langchain-cohere==0.1.5
+crewai>=0.28.8
+crewai_tools>=0.1.6
+langchain_community>=0.0.29
+langchain>=0.1.13
+langchain-openai>=0.1.7
+langchain-cohere>=0.1.5
 instructor>=0.5.2,<0.6.0
 opentelemetry-sdk>=1.22.0,<2.0.0
 openai>=1.13.3,<2.0.0
