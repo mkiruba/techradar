@@ -2,7 +2,7 @@
 import sys
 import warnings
 from datetime import datetime
-from tech_radar.crew import TechRadar
+from crew import TechRadar
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -16,7 +16,7 @@ def run():
     Run the technology radar analysis crew.
     """
     inputs = {
-        "technology_radar": "src/tech_radar/files/technology-radar.md"
+        "technology_radar": "files/technology-radar.md"
     }
     
     try:
@@ -30,7 +30,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "technology_radar": "src/tech_radar/files/technology-radar.md"
+        "technology_radar": "files/technology-radar.md"
     }
     try:
         return TechRadar().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -51,7 +51,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "technology_radar": "src/tech_radar/files/technology-radar.md"
+        "technology_radar": "files/technology-radar.md"
     }
     try:
         return TechRadar().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)

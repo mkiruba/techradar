@@ -52,28 +52,28 @@ class TechRadar():
 	def backend_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['backend_task'],
-			output_file='src/tech_radar/files/backend_analysis.md'
+			output_file='files/backend_analysis.md'
 		)
 
 	@task
 	def frontend_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['frontend_task'],
-			output_file='src/tech_radar/files/frontend_analysis.md'
+			output_file='files/frontend_analysis.md'
 		)
 
 	@task
 	def testing_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['testing_task'],
-			output_file='src/tech_radar/files/testing_analysis.md'
+			output_file='files/testing_analysis.md'
 		)
 
 	@task
 	def coordinator_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['coordinator_task'],
-			output_file='src/tech_radar/files/coordinator_summary.md'
+			output_file='files/coordinator_summary.md'
 		)
 
 	@crew
