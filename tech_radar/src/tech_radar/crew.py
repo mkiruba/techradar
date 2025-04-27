@@ -18,16 +18,30 @@ class TechRadar():
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
-	def researcher(self) -> Agent:
+	def backend_expert(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['backend_expert'],
 			verbose=True
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def frontend_expert(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['frontend_expert'],
+			verbose=True
+		)
+
+	@agent
+	def testing_expert(self) -> Agent:
+		return Agent(
+			config=self.agents_config['testing_expert'],
+			verbose=True
+		)
+
+	@agent
+	def coordinator(self) -> Agent:
+		return Agent(
+			config=self.agents_config['coordinator'],
 			verbose=True
 		)
 
@@ -35,16 +49,31 @@ class TechRadar():
 	# task dependencies, and task callbacks, check out the documentation:
 	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
 	@task
-	def research_task(self) -> Task:
+	def backend_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['research_task'],
+			config=self.tasks_config['backend_task'],
+			output_file='src/tech_radar/files/backend_analysis.md'
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def frontend_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			config=self.tasks_config['frontend_task'],
+			output_file='src/tech_radar/files/frontend_analysis.md'
+		)
+
+	@task
+	def testing_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['testing_task'],
+			output_file='src/tech_radar/files/testing_analysis.md'
+		)
+
+	@task
+	def coordinator_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['coordinator_task'],
+			output_file='src/tech_radar/files/coordinator_summary.md'
 		)
 
 	@crew
