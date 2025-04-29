@@ -1,7 +1,7 @@
 backend_task:
   description: >
     Analyze backend technologies, libraries, and frameworks from the provided Technology Radar document.
-    Focus on .NET and Python ecosystems mentioned in the document. For each technology:
+    Focus on .NET ecosystem mentioned in the document. For each technology:
     1. Analyze current adoption levels in the industry
     2. Specify whether it's open-source or licensed
     3. Provide insights on why certain technologies are in their respective quadrants (Adopt, Trial, Assess, Hold)
